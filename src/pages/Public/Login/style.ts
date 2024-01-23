@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { colors } from '../../../styles/colors'
-import { Uea } from '../../../assets/images'
 
 export const Container = styled.div`
     display: grid;
@@ -21,10 +20,20 @@ export const Account = styled.div`
 `
 
 export const BoxAccount = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
     border: 1px solid white;
     border-radius: 8px;
     background:white ;
+    
 `
+export const ContainerDatas = styled.div`
+    width: 500px;
+    display:flex;
+    flex-direction: column;
+`
+
 
