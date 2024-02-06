@@ -88,6 +88,8 @@ export const NotAccount = styled.div`
 
     a{
         font-weight: bold;
+        text-decoration: none; 
+        color: inherit;
         cursor:pointer ;
     }
 `
