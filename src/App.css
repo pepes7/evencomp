@@ -1,36 +1,41 @@
 html,
-body, #root {
-    height: 100%;
-    margin: 0px;
-    width: 100%;
-    padding: 0;
-    font-family: "Inter";
-    scrollbar-width: thin;
-    -webkit-text-size-adjust: none;
-    -webkit-font-smoothing: antialiased;
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  font-family: "Barlow";
+  scrollbar-width: thin;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
 }
 
-
-@font-face {
-    font-family: 'Inter';
-    src: local('Inter-Light'),
-        url('./assets/fonts/Inter/Inter-Light.woff2') format('truetype');
+input {
+  box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'Light';
-    src: local('Inter-Light'),
-        url('./assets/fonts/Inter/Inter-Light.woff2') format('truetype');
-}
-
-@font-face {
-    font-family: 'Medium';
-    src: local('Inter-Medium'),
-        url('./assets/fonts/Inter/Inter-Medium.woff2') format('truetype');
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
 @font-face {
-    font-family: 'Bold';
-    src: local('Inter-Bold'),
-        url('./assets/fonts/Inter/Inter-Bold.woff2') format('truetype');
+  font-family: "Light";
+  src: local("Barlow-Light"),
+    url("./assets/fonts/Barlow/Barlow-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Medium";
+  src: local("Barlow-Medium"),
+    url("./assets/fonts/Barlow/Barlow-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bold";
+  src: local("Barlow-Bold"),
+    url("./assets/fonts/Barlow/Barlow-Bold.ttf") format("truetype");
 }

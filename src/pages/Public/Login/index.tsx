@@ -1,8 +1,9 @@
 import { Uea } from "../../../assets/images";
-import { Account, BoxAccount, BoxLogo, Container, ContainerDatas } from "./style";
+import { PrimaryButton } from "../../../components/Button";
+import { Input } from "../../../components/Input";
+import { Account, BoxAccount, BoxLogo, Container, ContainerDatas, NotAccount } from "./style";
 
 export function Login() {
-
     return (
         <Container>
             <BoxLogo>
@@ -11,13 +12,17 @@ export function Login() {
             <Account>
                 <BoxAccount>
                     <ContainerDatas>
-                        <h2>Seja bem-vindo!</h2>
-                        <input/>
-                        <input/>
+                        <h1>Seja bem-vindo!</h1>
+                        <Input placeholder="Email" className="mg-bt-32" />
+                        <Input placeholder="Senha" type="password" />
                         <span>Esqueceu sua senha?</span>
 
-                        <button>Entrar</button>
+                        <PrimaryButton text="Entrar" width="100%" height="55px" className="mg-tp-64" />
                     </ContainerDatas>
+                    <NotAccount>
+                        <h4> Não possui conta?</h4>
+                        <a>Cadastre-se</a>
+                    </NotAccount>
                 </BoxAccount>
             </Account>
         </Container>
