@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../../../styles/colors'
 
 export const Container = styled.div`
     display: grid;
@@ -8,11 +9,10 @@ export const Container = styled.div`
     width: 100%;
     overflow-x: hidden;
     #routes-content {
-        margin-right: 3rem;
+        padding-top: 4rem;
         padding-right: 2rem;
-        margin-left: 1rem;
-        padding-left: 1rem;
-
+        padding-left: 4rem;
+        background:${colors.gray};
         height: 100%;
     }
 `

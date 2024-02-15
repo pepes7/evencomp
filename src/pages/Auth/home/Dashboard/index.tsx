@@ -1,5 +1,37 @@
-export default function Dashboard(){
+import CardStatus from "../../../../components/CardStatus";
+import { EStatus } from "../../../../util/enums";
+import { Container, TableCell, TableHeader, TableRow, TableStyled } from "./style";
+
+export default function Dashboard() {
+    const headers = ['Nome do evento', 'Palestrante', 'Data', "Horário", "Duração", "Vagas", "Status"];
+    const data = [
+        ['Evento 1', "Palestrante", '05/10/2023', "14:45", "2h15min", "50", 1],
+        ['Evento 2', "Palestrante", '05/10/2023', "14:45", "2h15min", "50", 1],
+        ['Evento 3', "Palestrante", '05/10/2023', "14:45", "2h15min", "50", 2],
+    ];
     return (
-        <p>Dashboard</p>
+        <Container>
+            <h1>Dê uma olhada nos eventos desse mês =)</h1>
+            <span>Pesquise pelo nome, se preferir :)</span>
+
+            <TableStyled>
+                <thead>
+                    <tr>
+                        {headers.map((header, index) => (
+                            <TableHeader key={index}>{header}</TableHeader>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((row, rowIndex) => (
+                        <TableRow key={rowIndex}>
+                            {row.map((cell, cellIndex) => (
+                                <TableCell key={cellIndex}>{cellIndex === row.length - 1 ? <CardStatus status={cell as EStatus}/> :  cell}</TableCell>
+                            ))}
+                        </TableRow>
+                    ))}
+                </tbody>
+            </TableStyled>
+        </Container>
     )
 }
