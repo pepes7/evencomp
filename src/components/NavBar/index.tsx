@@ -4,6 +4,7 @@ import { Tooltip as ReactTooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
 import { useState } from 'react'
 import { IoMenuOutline } from "react-icons/io5";
+import CardPerfil from '../CardPerfil'
 
 const NavBar = (props: any) => {
     const { routes: options } = props
@@ -18,9 +19,8 @@ const NavBar = (props: any) => {
                     id={'nav-link'}
                 >
                     <div className="text">EvenComp</div>
-                    <IoMenuOutline className="icon" onClick={() => setOpen(!open)}/>
+                    <IoMenuOutline className="icon" onClick={() => setOpen(!open)} />
                 </ControlMenu>
-
                 {options.map(
                     (
                         {
@@ -51,7 +51,9 @@ const NavBar = (props: any) => {
                         )
                     }
                 )}
+
             </Menu>
+            <CardPerfil open={open} />
         </Container>
     )
 }

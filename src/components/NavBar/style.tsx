@@ -6,6 +6,8 @@ interface StyledContainer {
 }
 
 export const Container = styled.div<StyledContainer>`
+    display: grid;
+    grid-template-rows: 1fr auto;
     width: 250px;
     height: 100%;
     background-color: ${colors.green};
