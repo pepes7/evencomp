@@ -1,4 +1,4 @@
-import { Route, RouteComponentProps, Switch } from "react-router-dom"
+import { Redirect, Route, RouteComponentProps, Switch } from "react-router-dom"
 import { Container } from "./style"
 import NavBar from "../../../components/NavBar"
 import { AiOutlineHome } from "react-icons/ai";
@@ -51,7 +51,7 @@ const Home = (props: RouteComponentProps) => {
                                 />
                             )
                     )}
-
+                    <Redirect exact to="/home/dashboard" />
                 </Switch>
             </main>
         </Container>

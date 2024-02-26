@@ -42,6 +42,9 @@ export const PerfilCard = styled.div<StyledContainer>`
     span {
         font-weight: 600;
         font-size: 20px;
+        white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 `
 

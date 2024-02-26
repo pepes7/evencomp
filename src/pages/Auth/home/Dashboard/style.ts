@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../../../styles/colors";
 
 export const Container = styled.div`
     display: flex;
@@ -12,6 +13,12 @@ export const Container = styled.div`
         margin-top: 2rem;
     }
    
+   .icon{
+      width:35px;
+      height:35px;
+      color: ${colors.green};
+      cursor: pointer;
+   }
 `
 
 export const TableStyled = styled.table`

@@ -44,7 +44,7 @@ export const BoxAccount = styled.div`
     border-radius: 8px;
     background:white ;
 `
-export const ContainerDatas = styled.div`
+export const ContainerDatas = styled.form`
     display:flex;
     flex-direction: column;
     justify-content: center; 
