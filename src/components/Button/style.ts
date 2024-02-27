@@ -6,15 +6,6 @@ interface TProps {
     height?: string
 }
 
-/* font-family: 'Barlow';
-font-style: normal;
-font-weight: 400;
-line-height: 30px;
- */
-
-/* Rectangle 5 */
-
-
 
 export const Button = styled.button<TProps>`
     font-family: 'Barlow';
@@ -36,4 +27,10 @@ export const Button = styled.button<TProps>`
     border: 1px solid transparent;
 
     border-radius: 25px;
+`
+
+export const SecondaryBtn = styled(Button)<TProps>`
+    color: ${colors.green};
+    border: 1px solid ${colors.green};
+    background: none;
 `

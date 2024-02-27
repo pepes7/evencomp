@@ -19,3 +19,5 @@ export const getUserToken = () => {
     if (!userStr) return null
     return JSON.parse(userStr)
 }
+
+export const getToken = () => localStorage.getItem(TOKEN_KEY)

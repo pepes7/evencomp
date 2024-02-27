@@ -1,4 +1,4 @@
-import { Button } from "./style"
+import { Button, SecondaryBtn } from "./style"
 
 interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
     text: string
@@ -18,5 +18,20 @@ export function PrimaryButton(props: ButtonProps) {
         >
             {children ? children : props.text}
         </Button>
+    )
+}
+
+export function SecondaryButton(props: ButtonProps) {
+    const { children } = props
+
+    return ( 
+        <SecondaryBtn
+            type={props.type}
+            disabled={props.disabled}
+            onClick={props.onClick}
+            {...props}
+        >
+            {children ? children : props.text}
+        </SecondaryBtn>
     )
 }
