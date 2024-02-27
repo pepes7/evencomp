@@ -11,11 +11,12 @@ import { useToasts } from "react-toast-notifications";
 import { TEvent } from "../../../../../../data/event";
 
 interface Tprops {
-    event?: TEvent
+    event?: TEvent,
+    view: boolean
 }
 
 export default function InscreverEvent(props: Tprops) {
-    const { event } = props;
+    const { event, view } = props;
     const user: TUser = getUserToken()
     const { goBack } = useHistory()
     const { addToast } = useToasts()
@@ -39,8 +40,8 @@ export default function InscreverEvent(props: Tprops) {
 
     return (
         <Container>
-            <h1>Finalize sua inscrição no evento {event?.title}</h1>
-            <span>Verifique as informações antes de confirmar</span>
+            {view ? <h1>Informações</h1> : <h1>Finalize sua inscrição no evento {event?.title}</h1>}
+            {!view && <span>Verifique as informações antes de confirmar</span>}
             <FormEvent onSubmit={create}>
                 <Input placeholder="Titulo" disabled name="title" required defaultValue={event?.title} />
                 <Input placeholder="Descrição" disabled name="description" required defaultValue={event?.description} />
@@ -55,7 +56,7 @@ export default function InscreverEvent(props: Tprops) {
 
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                     <SecondaryButton width="174px" height="58px" onClick={() => goBack()} type="reset" text="Voltar" />
-                    <PrimaryButton width="174px" height="58px" type="submit" text="Confirmar" />
+                    {!view && <PrimaryButton width="174px" height="58px" type="submit" text="Confirmar" />}
                 </div>
             </FormEvent>
         </Container>

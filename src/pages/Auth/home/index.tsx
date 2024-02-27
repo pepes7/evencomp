@@ -5,6 +5,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { MdEvent } from "react-icons/md";
 import { GoHistory } from "react-icons/go";
 import Dashboard from "./Dashboard"
+import Events from "./Events";
 
 export interface IRoute {
     text: string
@@ -23,15 +24,15 @@ const routes: IRoute[] = [
     {
         text: 'Eventos',
         url: '/home/eventos',
-        component: Dashboard,
+        component: Events,
         Icon: MdEvent,
     },
-    {
+    /* {
         text: 'Histórico',
         url: '/home/historico',
         component: Dashboard,
         Icon: GoHistory,
-    },
+    }, */
 ]
 
 const Home = (props: RouteComponentProps) => {
