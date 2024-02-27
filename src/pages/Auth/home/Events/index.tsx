@@ -23,7 +23,6 @@ export default function Events(props: RouteComponentProps) {
 
         useEffect(() => {
             api.get("evencomp/userEvents/getAll/" + user.id).then((res) => {
-                console.log("🚀 ~ api.get ~ res:", res)
                 res.data.map(({ activity_id }: any) => {
                     api.get("evencomp/activities/get/" + activity_id).then((res) => {
                         setEvents((data) => [...data, res.data])
