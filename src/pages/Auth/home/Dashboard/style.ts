@@ -19,6 +19,13 @@ export const Container = styled.div`
       color: ${colors.green};
       cursor: pointer;
    }
+
+   .icon-delete{
+      width:30px;
+      height:30px;
+      color: #FF0000 ;
+      cursor: pointer;
+   }
 `
 
 export const TableStyled = styled.table`
